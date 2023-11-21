@@ -4,29 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Registration</title>
-     <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <form id="userRegistrationForm">
         <h2>User Registration</h2>
 
-        <label for="userAlias">User Alias:</label>
-        <input type="text" id="userAlias" name="userAlias" required>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+        <p id="nameError" class="error"></p>
 
-        <label for="userEmail">Email Address:</label>
-        <input type="email" id="userEmail" name="userEmail" required>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        <p id="emailError" class="error"></p>
 
-        <label for="userPassword">Password:</label>
-        <input type="password" id="userPassword" name="userPassword" required>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+        <p id="dobError" class="error"></p>
 
-        <label for="confirmUserPassword">Confirm Password:</label>
-        <input type="password" id="confirmUserPassword" name="confirmUserPassword" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <p id="passwordError" class="error"></p>
+
+        <label for="acceptTerms">Accept Terms and Conditions:</label>
+        <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+        <p id="acceptTermsError" class="error"></p>
 
         <p id="errorMsg" class="error"></p>
 
-        <button type="button" onclick="validateUserRegistration()">Register</button>
+        <button type="button" onclick="validateUserRegistration()">Submit</button>
+
+        <div id="entries">
+            <h2>Entries</h2>
+            <table id="entriesTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Dob</th>
+                        <th>Accept Terms?</th>
+                    </tr>
+                </thead>
+                <tbody id="entriesTableBody"></tbody>
+            </table>
+        </div>
     </form>
-<script src="index.js"></script>
+
+   <script src="index.js"></script>
+
 </body>
 </html>
