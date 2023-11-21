@@ -29,6 +29,13 @@ function validateUserRegistration() {
                 return;
             }
 
+            // Validate date of birth after 1967
+            var minDate = new Date("1967-01-01");
+            if (selectedDate <= minDate) {
+                dobError.innerHTML = "Date of Birth must be after 1967.";
+                return;
+            }
+
             if (!name) {
                 nameError.innerHTML = "Name is required.";
                 return;
