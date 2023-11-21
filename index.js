@@ -1,5 +1,4 @@
 
-    <script>
         function validateUserRegistration() {
             var alias = document.getElementById("userAlias").value;
             var email = document.getElementById("userEmail").value;
@@ -24,4 +23,3 @@
             // If all validations pass, you can submit the form.
             document.getElementById("userRegistrationForm").submit();
         }
-    </script>
